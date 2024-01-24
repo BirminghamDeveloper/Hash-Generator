@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Hash-Generator</string>
+    <string name="hash_generator">Hash \nGenerator</string>
+</resources>
