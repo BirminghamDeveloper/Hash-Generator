@@ -7,6 +7,34 @@
     android:background="@color/dark_blue"
     tools:context=".HashingActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/med_blue"
+        app:boxBackgroundColor="@color/med_blue"
+        app:boxStrokeColor="@color/main_green"
+        app:endIconTint="@color/main_green"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDsiplay"
+        app:startIconDrawable="@drawable/lock"
+        app:startIconTint="@color/main_green">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="hint"
+            android:paddingStart="40dp">
+
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/tvDsiplay"
         android:layout_width="wrap_content"
@@ -25,16 +53,17 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="@color/med_blue"
         android:layout_margin="20dp"
-        android:hint="Enter Plain Text"
-        android:textColorHint="@color/light_text"
-        android:padding="14dp"
+        android:background="@color/med_blue"
         android:gravity="start|end"
+        android:hint="Enter Plain Text"
+        android:padding="14dp"
         android:textColor="@color/white"
+        android:textColorHint="@color/light_text"
         app:layout_constraintBottom_toTopOf="@+id/generate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/generate"
